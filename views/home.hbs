@@ -2,14 +2,20 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    {{> styles }}
+    {{> header }}
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p> {{ body }} </p>
-    <p>
-      <a href="about">About page</a>
-    </p>
-    {{> footer }}
+    <main>
+      <h1>{{ title }}</h1>
+      <p class="landing">This is a simple web site calculating 
+        how long you should wait for some moment to come.
+        Just submit a date and get the numbers!
+      </p>
+
+      <p class="small">It also demonstates some basic features of Node.js</p>
+      
+      <a class="button-link" href="/calculate">Give it a try!</a>
+
+    </main>
   </body>
 </html>

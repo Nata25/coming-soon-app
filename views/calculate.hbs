@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    {{> header }}
+  </head>
+  <body>
+    <main>
+      <h1>{{ title }}</h1>
+      <div class="circle">
+        <form method="GET" action="/result">
+        <input type="date" name="to">
+        <button value="Submit">Submit</button>
+      </form>  
+      </div>
+    </main>
+    {{> footer }}
+  </body>
+</html>
