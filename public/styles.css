@@ -66,7 +66,7 @@ footer {
   text-align: center;
   line-height: 2em;
   color: #fff;
-  background: url('img/background.jpg') no-repeat center;
+  background: #8fafe4 url('img/background.jpg') no-repeat center;
   background-size: 700px;
   border-radius: 50%;
 }
