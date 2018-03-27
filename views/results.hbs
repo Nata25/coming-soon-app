@@ -6,7 +6,11 @@
   </head>
   <body>
     <main>
-      <p class="circle circle--results">Time left: <br>{{ setEnding days }} and {{ shorten hours }} ⏳</p>
+      <p 
+        class="circle"
+        style="background-color: {{ color }};"
+      >
+        Time left: <br>{{ setEnding days }} and {{ shorten hours }} ⏳</p>
       <a class="button-link" href="/calculate">Try again</a>
     </main>
     {{> footer }}

@@ -6,6 +6,12 @@ const app = express();
 
 const port = process.env.PORT || 9000;
 
+// helper functions for results page
+const calcColor = () => {
+  return Math.floor(Math.random() * 250);
+}
+const generateRGB = () => `rgb(${calcColor()}, ${calcColor()}, ${calcColor()})`;
+
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
@@ -21,6 +27,7 @@ hbs.registerHelper('setEnding', days => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     title: 'Don\'t wait too long!',
+    color: generateRGB()
   });
 });
 app.get('/calculate', (req, res) => {
@@ -34,11 +41,13 @@ app.get('/result', (req, res) => {
   const duration = moment.duration(end.diff(now));
   const days = Math.floor(duration.asDays());
   const hours = moment().endOf('day').fromNow();
+  
   if (days > 0) {
     res.render('results.hbs', {
       title: 'Here we go!',
       days,
       hours,
+      color: generateRGB()
     });
   } else {
     res.render('error.hbs', {

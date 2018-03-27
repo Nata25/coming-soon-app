@@ -8,13 +8,25 @@
     <main>
       <h1>{{ title }}</h1>
       <p class="landing">This is a simple web site calculating 
-        how long you should wait for some moment to come.
+        how soon a specified moment will come.
         Just submit a date and get the numbers!
       </p>
 
-      <p class="small">It also demonstates some basic features of Node.js</p>
+      <p class="landing">
+        And pay attention to the 
+        <span 
+          class="colorized" 
+          style="background-color: {{ color }};">
+            color
+          </span> you'll get! 
+        Maybe it's a hint about the upcoming event? 🧙
+      </p>
+
+      <p class="small">The app also demonstates some basic features of Node.js + Express</p>
       
-      <a class="button-link" href="/calculate">Give it a try!</a>
+      <a 
+        class="button-link" 
+        href="/calculate">Give it a try!</a>
 
     </main>
   </body>

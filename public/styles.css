@@ -19,12 +19,12 @@ input {
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
-  border: 0;
+  border: 1px solid #ef9503;
 }
 
 button {
   display: block;
-  margin: 7px auto;
+  margin: 20px auto;
   padding: 10px 20px;
   background: #ef9503;
   border: 0;
@@ -66,13 +66,8 @@ footer {
   text-align: center;
   line-height: 2em;
   color: #fff;
-  background: #8fafe4 url('img/background.jpg') no-repeat center;
   background-size: 700px;
   border-radius: 50%;
-}
-
-.circle--results {
-  background-image: url('img/background2.jpg');
 }
 
 .small {
@@ -82,9 +77,10 @@ footer {
   color: #999;
 }
 
-.emphasized {
-  display: block;
-  color: yellow;
+.colorized {
+  display: inline-block;
+  padding: 3px 5px;
+  color: #fff; 
 }
 
 .button-link {
