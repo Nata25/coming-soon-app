@@ -42,7 +42,7 @@ app.get('/result', (req, res) => {
   const days = Math.floor(duration.asDays());
   const hours = moment().endOf('day').fromNow();
   
-  if (days > 0) {
+  if (days >= 0) {
     res.render('results.hbs', {
       title: 'Here we go!',
       days,
